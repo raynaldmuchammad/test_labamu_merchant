@@ -1,3 +1,3 @@
 class UrlEndpoint {
-  static const String bookUrl = '/books';
+  static const String product = '/products';
 }

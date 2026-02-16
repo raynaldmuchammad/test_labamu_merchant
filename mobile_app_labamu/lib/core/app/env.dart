@@ -4,13 +4,13 @@ class Env {
   static String get baseUrl {
     switch (envValue) {
       case EnvValue.DEVELOPMENT:
-        return "http://localhost:3000";
+        return "http://192.168.0.33:3000";
       case EnvValue.STAGING:
-        return "http://localhost:3000";
+        return "http://192.168.0.33:3000";
       case EnvValue.PRODUCTION:
-        return "http://localhost:3000";
+        return "http://192.168.0.33:3000";
       default:
-        return "http://localhost:3000"; // development url
+        return "http://192.168.0.33:3000"; // development url
     }
   }
 
