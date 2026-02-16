@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider<MainCubit>(
           create: (context) => MainCubit()..initCubit(),
-          child: MainPage(),
+          child: const MainPage(),
         ),
         // BlocProvider<BoardingCubit>(
         //   create: (context) => BoardingCubit()..initCubit(),
@@ -41,7 +41,7 @@ class App extends StatelessWidget {
         navigatorKey: AppConstant.navigatorKey,
         debugShowCheckedModeBanner: Env.isDevelopment,
         onGenerateRoute: RouteGenerator.generateRoute,
-        initialRoute: Routes.splash,
+        initialRoute: Routes.landing,
       ),
     );
   }

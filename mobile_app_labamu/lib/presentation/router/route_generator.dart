@@ -13,7 +13,7 @@ class RouteGenerator {
           return getPageRoute(
             BlocProvider(
               create: (context) => MainCubit()..initCubit(),
-              child: MainPage(),
+              child: const MainPage(),
             ),
           );
         // case Routes.boarding:

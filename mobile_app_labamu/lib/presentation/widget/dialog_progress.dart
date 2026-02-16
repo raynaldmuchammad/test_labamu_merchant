@@ -14,7 +14,7 @@ Future showProgressDialog({
       canPop: isDismissible,
       child: Dialog(
         elevation: 0,
-        insetPadding: EdgeInsets.all(Util.basePaddingMargin64),
+        insetPadding: const EdgeInsets.all(Util.basePaddingMargin64),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(Util.basePaddingMargin10),
         ),
@@ -31,16 +31,14 @@ Future showProgressDialog({
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  child: Text(
-                    "Loading...",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                    ),
+                const Text(
+                  "Loading...",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(height: Util.baseWidthHeight16),
-                Container(
+                const SizedBox(height: Util.baseWidthHeight16),
+                SizedBox(
                   width: Util.baseWidthHeight38,
                   height: Util.baseWidthHeight38,
                   child: CircularProgressIndicator(
