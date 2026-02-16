@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:mobile_app_labamu/core/constant/app_constant.dart';
-import 'package:mobile_app_labamu/core/constant/routes.dart';
-import 'package:mobile_app_labamu/presentation/router/route_generator.dart';
-import 'package:mobile_app_labamu/core/app/theme.dart';
-import 'package:mobile_app_labamu/core/app/env.dart';
-import 'package:mobile_app_labamu/domain/bloc/main_cubit.dart';
-import 'package:mobile_app_labamu/presentation/screen/main/main_page.dart';
+import '../constant/app_constant.dart';
+import '../constant/routes.dart';
+import '../../presentations/router/route_generator.dart';
+import 'theme.dart';
+import 'env.dart';
+import '../../domain/bloc/main_cubit.dart';
+import '../../presentations/ui/main_screen/main_page.dart';
 
 class App extends StatelessWidget {
   @override
