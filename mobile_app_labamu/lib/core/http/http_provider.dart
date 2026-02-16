@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:mobile_app_labamu/core/http/throw_exception.dart';
+import 'throw_exception.dart';
 
 class HttpProvider {
   Future<Map<String, dynamic>> post(String url, dynamic body,

@@ -1,4 +1,4 @@
-import 'package:mobile_app_labamu/core/constant/app_constant.dart';
+import '../constant/app_constant.dart';
 import 'package:encrypt_shared_preferences/provider.dart';
 
 class GeneralHelper {

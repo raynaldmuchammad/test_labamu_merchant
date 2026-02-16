@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_app_labamu/core/app/palette.dart';
+import 'palette.dart';
 
 final ThemeData basicTheme = buildBasicTheme();
 

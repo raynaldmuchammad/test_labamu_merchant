@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
-import 'package:mobile_app_labamu/core/constant/app_constant.dart';
-import 'package:mobile_app_labamu/core/helper/general_helpepr.dart';
-import 'package:mobile_app_labamu/core/base/base_cubit.dart';
-import 'package:mobile_app_labamu/state/main_state.dart';
-import 'package:mobile_app_labamu/data/repository_impl/main_repository.dart';
+import '../../core/constant/app_constant.dart';
+import '../../core/helper/general_helpepr.dart';
+import '../../core/base/base_cubit.dart';
+import '../../state/main_state.dart';
+import '../../data/repository_impl/main_repository.dart';
 
 class MainCubit extends BaseCubit<MainState> {
   MainCubit() : super(MainLoading());

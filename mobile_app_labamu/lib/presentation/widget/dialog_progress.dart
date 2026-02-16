@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app_labamu/core/constant/utils.dart';
-import 'package:mobile_app_labamu/core/app/palette.dart';
+import '../../core/constant/utils.dart';
+import '../../core/app/palette.dart';
 
 Future showProgressDialog({
   required BuildContext context,

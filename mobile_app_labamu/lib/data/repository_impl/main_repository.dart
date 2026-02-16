@@ -1,5 +1,5 @@
-import 'package:mobile_app_labamu/core/base/base_repository.dart';
-import 'package:mobile_app_labamu/core/constant/url_endpoint.dart';
+import '../../core/base/base_repository.dart';
+import '../../core/constant/url_endpoint.dart';
 
 class MainRepository extends BaseRepository {
   Future<Map<String, dynamic>> loadbook(dynamic body) async {

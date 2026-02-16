@@ -1,5 +1,5 @@
-import 'package:mobile_app_labamu/core/app/env.dart';
-import 'package:mobile_app_labamu/core/http/http_provider.dart';
+import '../app/env.dart';
+import '../http/http_provider.dart';
 
 class BaseRepository {
   HttpProvider provider = HttpProvider();

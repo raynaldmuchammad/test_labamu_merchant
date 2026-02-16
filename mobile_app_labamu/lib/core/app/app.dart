@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../constant/app_constant.dart';
 import '../constant/routes.dart';
-import '../../presentations/router/route_generator.dart';
+import '../../presentation/router/route_generator.dart';
 import 'theme.dart';
 import 'env.dart';
 import '../../domain/bloc/main_cubit.dart';
-import '../../presentations/ui/main_screen/main_page.dart';
+import '../../presentation/ui/main_screen/main_page.dart';
 
 class App extends StatelessWidget {
   @override

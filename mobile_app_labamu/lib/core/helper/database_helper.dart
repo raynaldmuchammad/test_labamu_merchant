@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:mobile_app_labamu/core/constant/db_constant.dart';
+import '../constant/db_constant.dart';
 
 class DatabaseHelper {
   //
