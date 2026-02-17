@@ -2,7 +2,8 @@ class Product {
   late int? id;
   late String? name;
   late String? description;
-  late double? price;
+  late int? price;
+  late String? imageUrl;
   late String? status;
   late String? updatedAt;
 
@@ -11,6 +12,7 @@ class Product {
     this.name,
     this.description,
     this.price,
+    this.imageUrl,
     this.status,
     this.updatedAt,
   });
@@ -21,8 +23,9 @@ class Product {
       name: json['name'],
       description: json['description'],
       price: json['price'],
+      imageUrl: json['imageUrl'],
       status: json['status'],
-      updatedAt: json['updated_at'],
+      updatedAt: json['updatedAt'],
     );
   }
 }

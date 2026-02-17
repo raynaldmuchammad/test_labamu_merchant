@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_app_labamu/core/constant/routes.dart';
+import 'package:mobile_app_labamu/domain/bloc/main_cubit.dart';
+import 'package:mobile_app_labamu/domain/bloc/product_add_cubit.dart';
+import 'package:mobile_app_labamu/domain/bloc/product_detail_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/splash_cubit.dart';
+import 'package:mobile_app_labamu/presentation/ui/main_screen/main_page.dart';
+import 'package:mobile_app_labamu/presentation/ui/product_screen/product_add_page.dart';
+import 'package:mobile_app_labamu/presentation/ui/product_screen/product_detail_page.dart';
 import 'package:mobile_app_labamu/presentation/ui/splash_screen/splash_page.dart';
-import '../../core/constant/routes.dart';
-import '../ui/main_screen/main_page.dart';
-import '../../domain/bloc/main_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/home_cubit.dart';
 import 'package:mobile_app_labamu/presentation/ui/home_screen/home_page.dart';
 
@@ -31,29 +35,33 @@ class RouteGenerator {
           return getPageRoute(
             BlocProvider(
               create: (context) => HomeCubit()..initCubit(),
-              child: HomePage(),
+              child: const HomePage(),
             ),
           );
         case Routes.product_add:
           return getPageRoute(
             BlocProvider(
-              create: (context) => HomeCubit()..initCubit(),
-              child: HomePage(),
+              create: (context) => ProductAddCubit()..initCubit(),
+              child: const ProductAddPage(),
             ),
           );
         case Routes.product_detail:
           return getPageRoute(
             BlocProvider(
-              create: (context) => HomeCubit()..initCubit(),
-              child: HomePage(),
+              create: (context) => ProductDetailCubit()..initCubit(),
+              child: const ProductDetailPage(),
             ),
+            settings,
+            true,
           );
         case Routes.product_update:
           return getPageRoute(
             BlocProvider(
               create: (context) => HomeCubit()..initCubit(),
-              child: HomePage(),
+              child: const HomePage(),
             ),
+            settings,
+            true,
           );
         // case Routes.boarding:
         //   return getPageRoute(

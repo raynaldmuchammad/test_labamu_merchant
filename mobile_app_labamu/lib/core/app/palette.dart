@@ -16,7 +16,7 @@ class Palette {
   static Color darkGrey = const Color(0xffCCCCCC);
   static Color darkBlue = const Color(0xff5d54a4);
   static Color navyBlue = const Color(0xff394989);
-  static Color green = const Color(0xff4CAF50);
+  static Color? green = const Color(0xff4CAF50);
   static Color darkGreen = const Color(0xff85a392);
   static Color lightGreen = const Color(0xff1fab89);
   static Color orange = const Color(0xfff79801);

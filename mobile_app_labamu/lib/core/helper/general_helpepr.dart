@@ -21,4 +21,15 @@ class GeneralHelper {
     dynamic value = preferences.remove(key);
     return value;
   }
+
+  String formatIdr(dynamic value) {
+    if (value == null) return '';
+    final numVal = value is num ? value : num.tryParse(value.toString()) ?? 0;
+    final intPart = numVal.truncate();
+    final intPartStr = intPart.toString().replaceAllMapped(
+          RegExp(r'\B(?=(\d{3})+(?!\d))'),
+          (m) => '.',
+        );
+    return 'Rp $intPartStr';
+  }
 }

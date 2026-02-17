@@ -111,14 +111,4 @@ Troubleshooting:
 - flutter clean && flutter pub get
 - iOS Pod issues: cd ios && pod repo update && pod install
 
----
-
-## Tests & CI
-- Unit tests: domain and data mappers
-- Widget tests: core screens
-- Integration/E2E: optional with integration_test
-- CI: run flutter analyze and flutter test on each PR
-
----
-
 If you want, I can add a small concrete Bloc + repository code example using dio + hive and a sample pending-operations schema.

@@ -1,3 +1,4 @@
+import 'package:mobile_app_labamu/core/app/env.dart';
 import 'package:mobile_app_labamu/core/constant/url_endpoint.dart';
 import 'package:mobile_app_labamu/data/model/product.dart';
 import 'package:mobile_app_labamu/domain/repository/product_repository.dart';
@@ -5,8 +6,8 @@ import 'package:mobile_app_labamu/domain/repository/product_repository.dart';
 class ProductRepositoryImpl extends ProductRepository {
   @override
   Future<List<Product>> fetchProducts() async {
-    final response = await provider.get(UrlEndpoint.product);
-    return (response as List).map((e) => Product.fromJson(e)).toList();
+    var response = await provider.get(Env.baseUrl + UrlEndpoint.product);
+    return (response as List).map((data) => Product.fromJson(data)).toList();
   }
 
   @override

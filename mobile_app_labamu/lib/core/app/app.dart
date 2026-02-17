@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import '../constant/app_constant.dart';
-import '../constant/routes.dart';
-import '../../presentation/router/route_generator.dart';
+import 'package:mobile_app_labamu/core/helper/connectivity/connection_service.dart';
+import 'package:mobile_app_labamu/core/helper/connectivity/connectivity_cubit.dart';
 import 'theme.dart';
 import 'env.dart';
+import '../constant/routes.dart';
+import '../constant/app_constant.dart';
 import '../../domain/bloc/main_cubit.dart';
 import '../../presentation/ui/main_screen/main_page.dart';
+import '../../presentation/router/route_generator.dart';
 
 class App extends StatelessWidget {
   @override
@@ -18,10 +20,9 @@ class App extends StatelessWidget {
           create: (context) => MainCubit()..initCubit(),
           child: const MainPage(),
         ),
-        // BlocProvider<BoardingCubit>(
-        //   create: (context) => BoardingCubit()..initCubit(),
-        //   child: BoardingPage(),
-        // ),
+        BlocProvider<ConnectivityCubit>(
+          create: (context) => ConnectivityCubit(connectionService: new ConnectionService())..initialize(),
+        ),
         // BlocProvider<SplashCubit>(
         //   create: (context) => SplashCubit()..initCubit(),
         //   child: SplashPage(),

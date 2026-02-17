@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'throw_exception.dart';
 
 class HttpProvider {
-  Future<Map<String, dynamic>> post(String url, dynamic body,
+  Future<dynamic> post(String url, dynamic body,
       {String token = ""}) async {
     dynamic responseJson;
 
@@ -25,7 +25,7 @@ class HttpProvider {
     return responseJson;
   }
 
-  Future<Map<String, dynamic>> get(String url, {String token = ""}) async {
+  Future<dynamic> get(String url, {String token = ""}) async {
     dynamic responseJson;
     try {
       final http.Response get = await http.get(
@@ -41,7 +41,7 @@ class HttpProvider {
     return responseJson;
   }
 
-  Future<Map<String, dynamic>> put(String url, dynamic body,
+  Future<dynamic> put(String url, dynamic body,
       {String token = ""}) async {
     dynamic responseJson;
     try {
@@ -59,7 +59,7 @@ class HttpProvider {
     return responseJson;
   }
 
-  Future<Map<String, dynamic>> delete(String url, {String token = ""}) async {
+  Future<dynamic> delete(String url, {String token = ""}) async {
     dynamic responseJson;
     try {
       final dynamic delete = await http.delete(
