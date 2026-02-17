@@ -23,6 +23,13 @@ class HomePageState extends State<HomePage> {
           title: const Text("Dashboard"),
         ),
         backgroundColor: Palette.white,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Palette.red,
+          onPressed: () {
+            Navigator.of(context).pushNamed(Routes.product_add);
+          },
+          child: Icon(Icons.add, color: Palette.white),
+        ),
         body: BlocConsumer<HomeCubit, HomeState>(
           listener: (context, state) => {
             //

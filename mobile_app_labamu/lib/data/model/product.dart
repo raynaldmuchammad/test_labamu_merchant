@@ -28,4 +28,15 @@ class Product {
       updatedAt: json['updatedAt'],
     );
   }
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'description': description,
+      'price': price,
+      'imageUrl': imageUrl,
+      'status': status,
+      'updatedAt': updatedAt,
+    };
+  }
 }
