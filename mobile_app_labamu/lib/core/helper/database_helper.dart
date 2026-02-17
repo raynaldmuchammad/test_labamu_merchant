@@ -1,16 +1,16 @@
 import 'package:hive/hive.dart';
-import '../constant/db_constant.dart';
+import 'package:mobile_app_labamu/core/constant/db_constant.dart';
 
 class DatabaseHelper {
   //
   void initDatabase(params) async {
     final collection = await BoxCollection.open(
       DbConstant.databaseName,
-      {DbConstant.collectionBook, DbConstant.collectionFavorite},
+      {DbConstant.collectionProduct},
       path: './',
     );
 
-    await collection.openBox<Map>(DbConstant.collectionFavorite);
+    await collection.openBox<Map>(DbConstant.collectionProduct);
   }
 
   void storeData(params) async {
@@ -24,7 +24,7 @@ class DatabaseHelper {
       params['collectionName'],
     );
 
-    await boxCollection.put(params['book'].id, params['book']);
+    await boxCollection.put(params['product'].id, params['product']);
   }
 
   dynamic fetchData(params) async {
@@ -38,7 +38,7 @@ class DatabaseHelper {
       params['collectionName'],
     );
 
-    var data = await boxCollection.get(params['book'].id);
+    var data = await boxCollection.get(params['product'].id);
     return data;
   }
 }
