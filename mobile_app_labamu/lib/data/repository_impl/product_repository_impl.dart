@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:mobile_app_labamu/core/app/env.dart';
@@ -13,7 +14,7 @@ class ProductRepositoryImpl extends ProductRepository {
   DatabaseHelper databaseHelper = DatabaseHelper();
 
   @override
-  Future<List<Product>> fetchProducts() async {
+  Future<List<Product>> fetchProducts(dynamic params) async {
     try {
       await connectivityService.initialize();
       databaseHelper.initDatabase();
@@ -22,7 +23,22 @@ class ProductRepositoryImpl extends ProductRepository {
       });
 
       if (productsLocal == null || connectivityService.isConnected) {
-        var response = await provider.get(Env.baseUrl + UrlEndpoint.product);
+        // build request URL with optional params
+        var requestUrl = Env.baseUrl + UrlEndpoint.product;
+        if (params != null) {
+          final base = Uri.parse(Env.baseUrl + UrlEndpoint.product);
+          if (params is Map<String, dynamic> && params.isNotEmpty) {
+            final qp = params
+                .map((k, v) => MapEntry(k.toString(), v?.toString() ?? ''));
+            requestUrl = base.replace(
+                queryParameters: {...base.queryParameters, ...qp}).toString();
+          } else {
+            requestUrl =
+                '${Env.baseUrl}${UrlEndpoint.product}/${Uri.encodeComponent(params.toString())}';
+          }
+        }
+
+        var response = await provider.get(requestUrl);
 
         if (productsLocal == null) {
           // Simpan data ke local database jika belum ada
@@ -34,12 +50,11 @@ class ProductRepositoryImpl extends ProductRepository {
             });
           }
         }
-        log("Fetched products from API: $response");
+
         return (response as List)
             .map((data) => Product.fromJson(data))
             .toList();
       } else {
-        log("Fetched products from local database: $productsLocal");
         return productsLocal;
       }
     } catch (e) {
@@ -66,5 +81,26 @@ class ProductRepositoryImpl extends ProductRepository {
       description: "Updated description for product ${product.id}",
       price: product.price,
     );
+  }
+
+  @override
+  Future<Product> addProduct({required Product product}) async {
+    try {
+      await connectivityService.initialize();
+      databaseHelper.initDatabase();
+      var response = await provider.post(
+        Env.baseUrl + UrlEndpoint.product,
+        jsonEncode(product.toJson()),
+      );
+      var newProduct = Product.fromJson(response);
+      databaseHelper.storeData({
+        "collectionName": DbConstant.collectionProduct,
+        "product": newProduct,
+      });
+      return newProduct;
+    } catch (e) {
+      log("Error adding product: $e");
+      throw Exception("Failed to add product");
+    }
   }
 }

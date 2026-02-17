@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app_labamu/core/constant/routes.dart';
+import 'package:mobile_app_labamu/domain/bloc/boarding_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/main_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/product_add_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/product_detail_cubit.dart';
 import 'package:mobile_app_labamu/domain/bloc/splash_cubit.dart';
+import 'package:mobile_app_labamu/presentation/ui/boarding_screen/boarding_page.dart';
 import 'package:mobile_app_labamu/presentation/ui/main_screen/main_page.dart';
 import 'package:mobile_app_labamu/presentation/ui/product_screen/product_add_page.dart';
 import 'package:mobile_app_labamu/presentation/ui/product_screen/product_detail_page.dart';
@@ -63,13 +65,13 @@ class RouteGenerator {
             settings,
             true,
           );
-        // case Routes.boarding:
-        //   return getPageRoute(
-        //     BlocProvider(
-        //       create: (context) => BoardingCubit()..initCubit(),
-        //       child: BoardingPage(),
-        //     ),
-        //   );
+        case Routes.boarding:
+          return getPageRoute(
+            BlocProvider(
+              create: (context) => BoardingCubit()..initCubit(),
+              child: BoardingPage(),
+            ),
+          );
         // case Routes.event:
         //   var args = settings.arguments;
         //   return getPageRoute(

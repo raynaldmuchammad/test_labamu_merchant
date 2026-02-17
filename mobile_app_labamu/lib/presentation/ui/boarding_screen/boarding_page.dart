@@ -33,7 +33,7 @@ class BoardingPageState extends State<BoardingPage> {
                 var content = cubit.pages[index];
                 dynamic image = Image.network(content['image']);
                 return Container(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: Util.basePaddingMargin16,
                   ),
                   child: Column(
@@ -41,7 +41,7 @@ class BoardingPageState extends State<BoardingPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: Util.basePaddingMargin16,
                         ),
                         decoration: BoxDecoration(
@@ -51,24 +51,24 @@ class BoardingPageState extends State<BoardingPage> {
                         ),
                         child: image,
                       ),
-                      SizedBox(height: Util.baseWidthHeight80),
+                      const SizedBox(height: Util.baseWidthHeight80),
                       Container(
                         alignment: Alignment.center,
                         child: Text(
                           content['title'],
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: Util.baseTextSize18,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
-                      SizedBox(height: Util.baseWidthHeight16),
+                      const SizedBox(height: Util.baseWidthHeight16),
                       Container(
                         child: Text(
                           content['description'],
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: Util.baseTextSize14,
                             fontWeight: FontWeight.w400,
                           ),
@@ -98,7 +98,7 @@ class BoardingPageState extends State<BoardingPage> {
           var cubit = context.read<BoardingCubit>();
           return Container(
             height: Util.baseWidthHeight200,
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: Util.basePaddingMargin20,
               horizontal: Util.basePaddingMargin56,
             ),
@@ -173,7 +173,7 @@ class BoardingPageState extends State<BoardingPage> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: Util.baseWidthHeight24),
+                            const SizedBox(width: Util.baseWidthHeight24),
                             Expanded(
                                 child: Container(
                               height: Util.baseWidthHeight48,
@@ -194,7 +194,7 @@ class BoardingPageState extends State<BoardingPage> {
                                 ),
                                 onPressed: () {
                                   cubit.controller.nextPage(
-                                    duration: Duration(milliseconds: 300),
+                                    duration: const Duration(milliseconds: 300),
                                     curve: Curves.easeInOut,
                                   );
                                 },
@@ -203,18 +203,18 @@ class BoardingPageState extends State<BoardingPage> {
                           ],
                         ),
                       ),
-                SizedBox(height: Util.baseWidthHeight24),
+                const SizedBox(height: Util.baseWidthHeight24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                     cubit.pages.length,
                     (index) => AnimatedContainer(
-                      duration: Duration(milliseconds: 150),
+                      duration: const Duration(milliseconds: 150),
                       width: index == cubit.pageIndex
                           ? Util.baseWidthHeight24
                           : Util.baseWidthHeight12,
                       height: Util.baseWidthHeight8,
-                      margin: EdgeInsets.symmetric(
+                      margin: const EdgeInsets.symmetric(
                         vertical: Util.basePaddingMargin8,
                         horizontal: Util.basePaddingMargin8,
                       ),
@@ -222,7 +222,7 @@ class BoardingPageState extends State<BoardingPage> {
                         color: index == cubit.pageIndex
                             ? Palette.red
                             : Palette.grey300,
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(Util.baseRoundedCorner12),
                         ),
                       ),

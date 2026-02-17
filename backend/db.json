@@ -39,6 +39,213 @@
       "description": "Ergonomic wireless mouse with silent clicks and smooth tracking.",
       "status": "draft",
       "updatedAt": "2026-01-05T16:45:00Z"
+    },
+    {
+      "id": "1771339475940",
+      "name": "Webcam Ligitech C225",
+      "description": "webcam logi c225",
+      "price": 185000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 21: 44: 35.942012"
+    },
+    {
+      "name": "Webcam Ligitech C225",
+      "description": "webcam logi c225",
+      "price": 185000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 21: 44: 35.942012",
+      "id": "kp_-QUR"
+    },
+    {
+      "id": 10,
+      "name": "Webcam Ligitech C225",
+      "description": "webcam logi c225",
+      "price": 185000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 21: 44: 35.942012"
+    },
+    {
+      "id": "hHH2Tbf",
+      "name": "Monitor Benq",
+      "description": "Monitor Benq",
+      "price": 8500000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:10:37.806654"
+    },
+    {
+      "id": "V5Z00qY",
+      "name": "Monitor LG",
+      "description": "Monitor LG",
+      "price": 1855000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:12:33.771388"
+    },
+    {
+      "id": "puEdncG",
+      "name": "Power Supply",
+      "description": "PSU 600 w",
+      "price": 650000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:30:58.162968"
+    },
+    {
+      "id": "XYynVUO",
+      "name": "Power Supply",
+      "description": "PSU 600 w",
+      "price": 650000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:31:20.897718"
+    },
+    {
+      "id": "q-KChgX",
+      "name": "PSU Anker",
+      "description": "PSU Anker 700w",
+      "price": 785000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:34:28.328230"
+    },
+    {
+      "id": "2ygu8ul",
+      "name": "Panser A550",
+      "description": "PSU Panser 650W full modular",
+      "price": 650000,
+      "imageUrl": null,
+      "status": "active",
+      "updatedAt": "2026-02-17 22:38:46.467067"
+    },
+    {
+      "id": "VnXP192",
+      "name": "MSI Monitot",
+      "description": "MSI Monitor AK37WK",
+      "price": 18550000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 22:47:20.551959"
+    },
+    {
+      "id": "DV3fEBc",
+      "name": "MSI Monitor W27AK",
+      "description": "Monitor 27 inch seri W27AK",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 22:52:08.364367"
+    },
+    {
+      "id": 5938,
+      "name": "Monitor MSI",
+      "description": "Monitor 27 inch",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:19:44.079657"
+    },
+    {
+      "id": "SQKKK",
+      "name": "MSI SK27A",
+      "description": "Monitor 27 inch",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:26:35.468071"
+    },
+    {
+      "id": "IYCEJ",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:29:23.847458"
+    },
+    {
+      "id": "CETLS",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:29:31.698330"
+    },
+    {
+      "id": "UMWFN",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:30:45.727081"
+    },
+    {
+      "id": "BDPQK",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:31:58.504207"
+    },
+    {
+      "id": "CWYMZ",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:32:15.910299"
+    },
+    {
+      "id": "BLWYA",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:32:47.143234"
+    },
+    {
+      "id": "OJANI",
+      "name": "Monitor MSI AK27WA",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:35:50.914894"
+    },
+    {
+      "id": "VQVIE",
+      "name": "MSI Monitor AK27WK",
+      "description": "Monitor 27 inch vesa 100",
+      "price": 8565000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:39:11.399071"
+    },
+    {
+      "id": "ZAMJC",
+      "name": "Kursi Kantor AMW",
+      "description": "Kursi gamming",
+      "price": 4575000,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-17 23:42:25.886957"
+    },
+    {
+      "id": "IPNDQ",
+      "name": "Kursi Gaming WKW",
+      "description": "Kursi gamming WKW",
+      "price": 4250500,
+      "imageUrl": "https://placehold.co/600x400/png",
+      "status": "active",
+      "updatedAt": "2026-02-18 01:03:03.879326"
     }
   ]
 }

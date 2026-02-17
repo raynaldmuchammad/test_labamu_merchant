@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../constant/app_constant.dart';
 import 'package:encrypt_shared_preferences/provider.dart';
 
@@ -31,5 +33,16 @@ class GeneralHelper {
           (m) => '.',
         );
     return 'Rp $intPartStr';
+  }
+
+  String generateCode() {
+    final _random = Random();
+    const _chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    return String.fromCharCodes(
+      Iterable.generate(
+        5,
+        (_) => _chars.codeUnitAt(_random.nextInt(_chars.length)),
+      ),
+    );
   }
 }

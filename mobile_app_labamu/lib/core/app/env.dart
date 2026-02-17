@@ -4,7 +4,7 @@ class Env {
   static String get baseUrl {
     switch (envValue) {
       case EnvValue.DEVELOPMENT:
-        return "http://192.168.0.33:3000";
+        return "http://192.168.0.33:3000"; // Change this to your actual development URL
       case EnvValue.STAGING:
         return "http://192.168.0.33:3000";
       case EnvValue.PRODUCTION:

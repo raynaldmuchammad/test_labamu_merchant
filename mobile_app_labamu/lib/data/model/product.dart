@@ -1,5 +1,5 @@
 class Product {
-  late int? id;
+  late dynamic id;
   late String? name;
   late String? description;
   late int? price;

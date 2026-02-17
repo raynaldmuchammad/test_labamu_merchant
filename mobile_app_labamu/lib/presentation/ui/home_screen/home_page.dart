@@ -30,19 +30,21 @@ class HomePageState extends State<HomePage> {
           },
           child: Icon(Icons.add, color: Palette.white),
         ),
-        body: BlocConsumer<HomeCubit, HomeState>(
-          listener: (context, state) => {
-            //
-          },
-          builder: (context, state) {
-            if (state is HomeLoading) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
+        body: SafeArea(
+          child: BlocConsumer<HomeCubit, HomeState>(
+            listener: (context, state) => {
+              //
+            },
+            builder: (context, state) {
+              if (state is HomeLoading) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
 
-            if (state is HomeLoaded) {
               return SingleChildScrollView(
+                controller: cubit.scrollController,
+                physics: const BouncingScrollPhysics(),
                 child: Container(
                   padding: const EdgeInsets.all(Util.basePaddingMargin16),
                   child: Column(
@@ -51,23 +53,41 @@ class HomePageState extends State<HomePage> {
                     children: [
                       UserInformationContainer(cubit: cubit),
                       const SizedBox(height: Util.baseWidthHeight20),
-                      ProductListContainer(cubit: cubit),
+                      // Expanded(
+                      //   flex: 10,
+                      //   child: 
+                      // ),
+                      ProductListContainer(cubit: cubit, state: state),
+                      // state is HomeLoadingPagination
+                      //     ? Container(
+                      //         height: Util.baseWidthHeight54,
+                      //         alignment: Alignment.center,
+                      //         padding: const EdgeInsets.symmetric(
+                      //           vertical: Util.basePaddingMargin10,
+                      //         ),
+                      //         child: Center(
+                      //           child: CircularProgressIndicator(
+                      //             color: Palette.red,
+                      //           ),
+                      //         ),
+                      //       )
+                      //     : Container()
                     ],
                   ),
                 ),
               );
-            }
-
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          },
+            },
+          ),
         ),
       ),
     );
   }
 
-  Container ProductListContainer({required HomeCubit cubit}) => Container(
+  Container ProductListContainer({
+    required HomeCubit cubit,
+    required HomeState state,
+  }) =>
+      Container(
         child: ListView.builder(
           itemCount: cubit.products.length,
           shrinkWrap: true,

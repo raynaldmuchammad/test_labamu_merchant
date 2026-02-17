@@ -6,15 +6,20 @@ class ProductUseCase {
 
   ProductUseCase(this.repository);
 
-  Future<List<Product>> getProducts() async {
-    return await repository.fetchProducts();
+  Future<List<Product>> getProducts(dynamic params) async {
+    return await repository.fetchProducts(params);
   }
 
   Future<Product> getProduct(String id) async {
     return await repository.fetchProduct(id: id);
   }
 
+  Future<Product> addProduct(Product product) async {
+    return await repository.addProduct(product: product);
+  }
+
   Future<Product> updateProduct(Product product) async {
+    product.updatedAt = DateTime.now().toString();
     return await repository.updateProduct(product: product);
   }
 }

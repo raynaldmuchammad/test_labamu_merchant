@@ -28,7 +28,7 @@ class MainPageState extends State<MainPage> {
               if (state is BoardingLoaded) {
                 WidgetsBinding.instance.addPostFrameCallback((_) {
                   Navigator.of(context).pushNamedAndRemoveUntil(
-                    Routes.boarding,
+                    Routes.home,
                     (route) => false,
                   );
                 });

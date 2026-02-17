@@ -11,3 +11,9 @@ class ProductAddError extends ProductAddState {
 
   ProductAddError(this.message);
 }
+
+class ProductAddFailedSubmit extends ProductAddState {
+  final String message;
+
+  ProductAddFailedSubmit(this.message);
+}
